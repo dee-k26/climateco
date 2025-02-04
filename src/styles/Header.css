@@ -1,0 +1,174 @@
+/* Header Styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: var(--primary-color); /* Beige header */
+  color: var(--text-color);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  left: 0;
+  right: 0;
+  max-width: 100%; /* Prevents horizontal overflow */
+  box-sizing: border-box; /* Ensures padding doesn't add extra width */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo & Site Name */
+.logo-container {
+  display: flex;
+  align-items: center;
+  padding: 0px 40px;
+}
+
+.logo {
+  height: 40px; /* Adjust as needed */
+  margin-right: 10px;
+}
+
+.site-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  padding: 0px 20px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li {
+  position: relative; /* Ensure dropdown positioning works */
+}
+
+/* Navigation Links */
+.nav ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.nav ul li a:hover {
+  text-decoration: underline;
+  color: var(--accent-color); /* Warm brown hover effect */
+}
+
+/* Services Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-button {
+  background: none;
+  border: none;
+  color: var(--text-color); /* Matches other nav links */
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--secondary-color); /* Soft off-white background */
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  padding: 10px 0;
+  width: 220px;
+  z-index: 10;
+  text-align: left;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Show dropdown when active */
+.dropdown:hover .dropdown-menu,
+.dropdown-menu.show {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Dropdown Menu Items */
+.dropdown-menu li {
+  padding: 10px 15px;
+}
+
+.dropdown-menu li a {
+  color: var(--text-color); /* Matches main text */
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect for Dropdown Links */
+.dropdown-menu li a:hover {
+  background: var(--accent-color); /* Dusty olive */
+  color: white;
+  border-radius: 3px;
+}
+
+/* Mobile Menu Button */
+.menu-button {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-button {
+      display: block;
+  }
+
+  .nav {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background: var(--primary-color);
+      width: 200px;
+      padding: 10px;
+  }
+
+  .nav.open {
+      display: flex;
+  }
+
+  .nav ul {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .nav ul li {
+      text-align: center;
+  }
+
+  /* Ensure dropdown menu in mobile is aligned properly */
+  .dropdown-menu {
+      position: relative;
+      width: 100%;
+      background: var(--secondary-color);
+  }
+}

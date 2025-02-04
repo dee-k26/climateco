@@ -1,0 +1,78 @@
+/* General Page Styling */
+.home {
+  width: 100%;
+  max-width: 100vw; /* Ensures it does not shrink */
+  margin: 0; /* Remove any margins */
+  padding: 0; /* Use padding instead of margin if spacing is needed */
+  text-align: center;
+  box-sizing: border-box; /* Prevents width from being affected by padding */
+}
+  
+  /* Hero Section */
+  .hero {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(rgba(191, 169, 128, 0.6), rgba(174, 145, 105, 0.3)),
+    url("../assets/girloncouchaircon.jpg") center top/cover no-repeat;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    
+  }
+  
+  .hero-overlay {
+    color: white;
+    padding: 40px;
+    border-radius: 8px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    padding-bottom: 20px;
+  }
+  
+  /* .cta-button {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .cta-button:hover {
+    background: #0056b3;
+  } */
+  
+  /* Sections */
+  .services, .about, .rebates, .maintenance {
+    background: var(--secondary-color);
+  padding: 50px 20px;
+  max-width: 900px;
+  width: 100%;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    padding-bottom: 20px;
+  }
+  

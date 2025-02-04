@@ -1,0 +1,35 @@
+html, body {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+:root {
+  --primary-color: #6A9F7D; /* Muted Green */
+  --secondary-color: #E3E4D8; /* Soft Off-White */
+  --text-color: #2D2D2D; /* Deep Grey */
+  --accent-color: #8A9A5B; /* Dusty Olive */
+}
+
+body {
+  background: var(--secondary-color);
+  color: var(--text-color);
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.cta-button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: var(--accent-color);
+}

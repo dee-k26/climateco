@@ -1,5 +1,10 @@
 import React from "react";
 import "../styles/Home.css";
+import airconInstall from "../assets/aircon-install.jpg";
+import airconRepair from "../assets/aircon-repair.jpg";
+import gasHeater from "../assets/gas-heater.jpg";
+import maintenance from "../assets/maintenance.jpg";
+import rebate from "../assets/rebate.jpg";
 
 const Home = () => {
   return (
@@ -16,30 +21,49 @@ const Home = () => {
       {/* Services Section */}
       <section className="services">
         <h2>Our Services</h2>
-        <p>All services are competitively priced at <strong>$181.50 inc.</strong> This includes call-outs and diagnosis of faulty systems.</p>
-        <p>
-          Any systems that can be fixed without additional parts within <strong>45 minutes</strong> won't cost extra.
-          If we can’t fix it, you'll receive a quote. If the system needs replacement, we credit the diagnosis fee toward the installation.
-        </p>
-      </section>
-
-      {/* About Us Section */}
-      <section className="about">
-        <h2>About Us</h2>
-        <p>At Climate Co, we pride ourselves on delivering top-quality heating and cooling solutions with transparency and reliability.</p>
+        <div className="service-grid">
+          <div className="service-card">
+            <img src={airconInstall} alt="Aircon Installation" />
+            <h3>Aircon Installation</h3>
+            <p>Professional installation for split systems, ducted, and multi-head units.</p>
+            <a href="/aircon-installation" className="learn-more">Learn More →</a>
+          </div>
+          <div className="service-card">
+            <img src={airconRepair} alt="Aircon Service & Repair" />
+            <h3>Aircon Service & Repair</h3>
+            <p>Comprehensive servicing & repairs to keep your system running efficiently.</p>
+            <a href="/aircon-service-repair" className="learn-more">Learn More →</a>
+          </div>
+          <div className="service-card">
+            <img src={gasHeater} alt="Gas Heater Service & Repair" />
+            <h3>Gas Heater Service & Repair</h3>
+            <p>Stay safe & warm with regular servicing & expert repairs for gas heaters.</p>
+            <a href="/gas-heater-service-repair" className="learn-more">Learn More →</a>
+          </div>
+        </div>
       </section>
 
       {/* Government Rebates Section */}
       <section className="rebates">
-        <h2>Government Rebates</h2>
-        <p>You may be eligible for government rebates on energy-efficient heating and cooling systems. Learn how you can save today!</p>
-        <a href="/government-rebate" className="cta-button">Find Out More</a>
+        <img src={rebate} alt="Government Rebates" className="rebate-img"/>
+        <div className="rebate-content">
+          <h2>Government Rebates</h2>
+          <p>Save on installation costs with available government incentives for energy-efficient heating & cooling solutions.</p>
+          <a href="/government-rebate" className="learn-more">Find Out More →</a>
+        </div>
       </section>
 
-      {/* Maintenance Importance Section */}
+      {/* Maintenance Section */}
       <section className="maintenance">
-        <h2>Why Heating & Cooling System Maintenance Matters</h2>
-        <p>Regular maintenance extends the lifespan of your system, improves efficiency, and ensures safe operation. Book your service today.</p>
+        <img src={maintenance} alt="Heating & Cooling Maintenance" />
+        <div className="maintenance-content">
+          <h2>The Importance of Regular Maintenance</h2>
+          <p>
+            Proper maintenance extends the lifespan of your heating & cooling system, improves efficiency, and ensures safe operation.
+            Our servicing includes inspections, cleaning, and minor adjustments to keep your system running smoothly.
+          </p>
+          <a href="/contact" className="learn-more">Schedule a Service →</a>
+        </div>
       </section>
     </div>
   );

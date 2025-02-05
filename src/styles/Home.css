@@ -150,7 +150,7 @@
   }
 
   /* Responsive Design */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .service-grid {
     flex-direction: column;
   }
@@ -162,6 +162,43 @@
 
   .rebate-img, .maintenance img {
     width: 100%;
+  }
+
+  .rebate-content, .maintenance-content {
+    padding-left: 0;
+  }
+} */
+ /* Ensure home page sections are centered on mobile */
+@media (max-width: 768px) {
+  .home {
+    text-align: center;
+  }
+
+  .hero h1, .hero p {
+    text-align: center;
+  }
+
+  .service-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    max-width: 90%;
+  }
+
+  .rebates, .maintenance {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .rebate-img, .maintenance img {
+    width: 100%;
+    max-width: 90%;
+  }
+  .rebate-img {
+    width: 100%;
+    max-width: 50%;
   }
 
   .rebate-content, .maintenance-content {

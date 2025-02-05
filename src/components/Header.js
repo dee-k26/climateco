@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Header.css";
 import logo from "../assets/logo192.png"; // Update with actual logo path
@@ -6,6 +6,14 @@ import logo from "../assets/logo192.png"; // Update with actual logo path
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  // Detect screen width for mobile behavior
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -15,11 +23,13 @@ const Header = () => {
       }
     };
 
-    document.addEventListener("click", handleClickOutside);
+    if (servicesOpen) {
+      document.addEventListener("click", handleClickOutside);
+    }
     return () => {
       document.removeEventListener("click", handleClickOutside);
     };
-  }, []);
+  }, [servicesOpen]);
 
   return (
     <header className="header">
@@ -29,31 +39,49 @@ const Header = () => {
         <h1 className="site-name">Climate Co</h1>
       </div>
 
-      {/* Menu Button (Mobile) */}
-      <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)}>
+      {/* Mobile Menu Button */}
+      <button
+        className="menu-button"
+        onClick={() => {
+          setMenuOpen(!menuOpen);
+          setServicesOpen(false); // Close dropdown when closing menu
+        }}
+      >
         ☰
       </button>
 
       {/* Navigation */}
       <nav className={`nav ${menuOpen ? "open" : ""}`}>
         <ul>
-          <li><Link to="/">Home</Link></li>
+          <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
+
           {/* Services Dropdown */}
-          <li className="dropdown">
-            <button className="dropdown-button" onClick={() => setServicesOpen(!servicesOpen)}>
+          <li
+            className={`dropdown ${servicesOpen ? "hover-active" : ""}`}
+            onMouseEnter={() => !isMobile && setServicesOpen(true)}  // Show on hover for desktop
+            onMouseLeave={() => !isMobile && setServicesOpen(false)} // Hide on hover out
+          >
+            <button
+              className="dropdown-button"
+              onClick={(e) => {
+                e.stopPropagation();
+                if (isMobile) setServicesOpen(!servicesOpen); // Toggle on click for mobile
+              }}
+            >
               Services
             </button>
             <ul className={`dropdown-menu ${servicesOpen ? "show" : ""}`}>
-              <li><Link to="/aircon-installation">Aircon Installation</Link></li>
-              <li><Link to="/aircon-service-repair">Aircon Service & Repair</Link></li>
-              <li><Link to="/gas-heater-installation">Gas Heater Installation</Link></li>
-              <li><Link to="/gas-heater-service-repair">Gas Heater Service & Repair</Link></li>
-              <li><Link to="/wood-fireplace-installation">Wood Fireplace Installation</Link></li>
+              <li><Link to="/aircon-installation" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>Aircon Installation</Link></li>
+              <li><Link to="/aircon-service-repair" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>Aircon Service & Repair</Link></li>
+              <li><Link to="/gas-heater-installation" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>Gas Heater Installation</Link></li>
+              <li><Link to="/gas-heater-service-repair" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>Gas Heater Service & Repair</Link></li>
+              <li><Link to="/wood-fireplace-installation" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>Wood Fireplace Installation</Link></li>
             </ul>
           </li>
-          <li><Link to="/government-rebate">Rebates</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
+
+          <li><Link to="/government-rebate" onClick={() => setMenuOpen(false)}>Rebates</Link></li>
+          <li><Link to="/about" onClick={() => setMenuOpen(false)}>About</Link></li>
+          <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
         </ul>
       </nav>
     </header>

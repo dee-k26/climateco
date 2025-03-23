@@ -18,7 +18,10 @@ const Header = () => {
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (!event.target.closest(".dropdown") && !event.target.closest(".dropdown-button")) {
+      if (
+        !event.target.closest(".dropdown") &&
+        !event.target.closest(".dropdown-button")
+      ) {
         setServicesOpen(false);
       }
     };
@@ -53,12 +56,16 @@ const Header = () => {
       {/* Navigation */}
       <nav className={`nav ${menuOpen ? "open" : ""}`}>
         <ul>
-          <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
+          <li>
+            <Link to="/" onClick={() => setMenuOpen(false)}>
+              Home
+            </Link>
+          </li>
 
           {/* Services Dropdown */}
           <li
             className={`dropdown ${servicesOpen ? "hover-active" : ""}`}
-            onMouseEnter={() => !isMobile && setServicesOpen(true)}  // Show on hover for desktop
+            onMouseEnter={() => !isMobile && setServicesOpen(true)} // Show on hover for desktop
             onMouseLeave={() => !isMobile && setServicesOpen(false)} // Hide on hover out
           >
             <button
@@ -71,17 +78,52 @@ const Header = () => {
               Services
             </button>
             <ul className={`dropdown-menu ${servicesOpen ? "show" : ""}`}>
-              <li><Link to="/aircon-installation" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>Aircon Installation</Link></li>
-              <li><Link to="/aircon-service-repair" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>Aircon Service & Repair</Link></li>
-              <li><Link to="/gas-heater-installation" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>Gas Heater Installation</Link></li>
-              <li><Link to="/gas-heater-service-repair" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>Gas Heater Service & Repair</Link></li>
-              <li><Link to="/wood-fireplace-installation" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>Wood Fireplace Installation</Link></li>
+              <li>
+                <Link
+                  to="/aircon-installation"
+                  onClick={() => {
+                    setServicesOpen(false);
+                    setMenuOpen(false);
+                  }}
+                >
+                  Aircon Installation
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/aircon-service"
+                  onClick={() => {
+                    setServicesOpen(false);
+                    setMenuOpen(false);
+                  }}
+                >
+                  Aircon Service & Repair
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/gas-heater-service"
+                  onClick={() => {
+                    setServicesOpen(false);
+                    setMenuOpen(false);
+                  }}
+                >
+                  Gas Heater Service & Repair
+                </Link>
+              </li>
             </ul>
           </li>
 
-          <li><Link to="/government-rebate" onClick={() => setMenuOpen(false)}>Rebates</Link></li>
-          <li><Link to="/about" onClick={() => setMenuOpen(false)}>About</Link></li>
-          <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
+          <li>
+            <Link to="/government-rebate" onClick={() => setMenuOpen(false)}>
+              Rebates
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" onClick={() => setMenuOpen(false)}>
+              Contact
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>

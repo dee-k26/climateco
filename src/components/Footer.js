@@ -11,19 +11,33 @@ const Footer = () => {
           <h3>Climate Co</h3>
           <p>Reliable Heating & Cooling Solutions</p>
           <p>📍 Ocean Grove, VIC</p>
-          <p>📞 <a href="tel:0430831199">0430 831 199</a></p>
-          <p>✉️ <a href="mailto:info@climateco.au">info@climateco.au</a></p>
+          <p>
+            📞 <a href="tel:0430831199">0430 831 199</a>
+          </p>
+          <p>
+            ✉️ <a href="mailto:info@climateco.au">info@climateco.au</a>
+          </p>
         </div>
 
         {/* Navigation Links */}
         <div className="footer-links">
           <h4>Quick Links</h4>
           <ul>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/aircon-installation">Aircon Installation</Link></li>
-            <li><Link to="/aircon-service-repair">Service & Repair</Link></li>
-            <li><Link to="/government-rebate">Rebates</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            <li>
+              <Link to="/about">About Us</Link>
+            </li>
+            <li>
+              <Link to="/aircon-installation">Aircon Installation</Link>
+            </li>
+            <li>
+              <Link to="/aircon-service-repair">Service & Repair</Link>
+            </li>
+            <li>
+              <Link to="/government-rebate">Rebates</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
           </ul>
         </div>
 
@@ -31,8 +45,24 @@ const Footer = () => {
         <div className="footer-legal">
           <h4>Legal</h4>
           <ul>
-            <li><Link to="/privacy-policy">Privacy Policy</Link></li>
-            <li><Link to="/terms-and-conditions">Terms & Conditions</Link></li>
+            <li>
+              <Link to="/privacy-policy">Privacy Policy</Link>
+            </li>
+            <li>
+              <Link to="/terms-and-conditions">Terms & Conditions</Link>
+            </li>
+          </ul>
+          <h4>Socials</h4>
+          <ul>
+            <li>
+              <a
+                href="https://maps.app.goo.gl/HpjDqFj2St8ubJn79"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Leave a Google Review
+              </a>
+            </li>
           </ul>
         </div>
       </div>

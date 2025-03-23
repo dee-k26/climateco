@@ -8,39 +8,41 @@
   box-sizing: border-box; /* Prevents width from being affected by padding */
   padding-bottom: 50px;
 }
-  
-  /* Hero Section */
-  .hero {
-    position: relative;
-    width: 100%;
-    background: linear-gradient(rgba(191, 169, 128, 0.6), rgba(174, 145, 105, 0.3)),
+
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(
+      rgba(191, 169, 128, 0.6),
+      rgba(174, 145, 105, 0.3)
+    ),
     url("../assets/girloncouchaircon.jpg") center top/cover no-repeat;
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0px;
-    
-  }
-  
-  .hero-overlay {
-    color: white;
-    padding: 40px;
-    border-radius: 8px;
-  }
-  
-  .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-    padding-bottom: 20px;
-  }
-  
-  /* * Services Section */ 
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+}
+
+.hero-overlay {
+  color: white;
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  padding-bottom: 20px;
+}
+
+/* * Services Section */
 .services {
   padding: 60px 20px;
   max-width: 1100px;
@@ -136,45 +138,48 @@
 .maintenance-content h2 {
   color: var(--primary-color);
 }
-  
-  h2 {
-    font-size: 2rem;
-    color: var(--accent-color);
-    margin-bottom: 20px;
-  }
-  
-  p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    padding-bottom: 20px;
-  }
 
-  /* Responsive Design */
-/* @media (max-width: 768px) {
-  .service-grid {
-    flex-direction: column;
-  }
+h2 {
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+}
 
-  .rebates, .maintenance {
-    flex-direction: column;
-    text-align: center;
-  }
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  padding-bottom: 20px;
+}
+.contact-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px; /* Increase max-width for a larger display */
+  margin: 0 auto;
+  padding: 40px; /* Extra padding for spacing */
+  box-sizing: border-box;
+}
 
-  .rebate-img, .maintenance img {
-    width: 100%;
-  }
-
-  .rebate-content, .maintenance-content {
-    padding-left: 0;
-  }
-} */
- /* Ensure home page sections are centered on mobile */
+/* Ensure home page sections are centered on mobile */
 @media (max-width: 768px) {
   .home {
     text-align: center;
   }
 
-  .hero h1, .hero p {
+  .hero {
+    background: linear-gradient(
+        rgba(191, 169, 128, 0.6),
+        rgba(174, 145, 105, 0.3)
+      ),
+      url("../assets/girloncouchaircon.jpg") center center/contain no-repeat;
+    height: 400px; /* Reduce height for better mobile visibility */
+    background-size: contain; /* Prevents cutting off the image */
+    background-position: center top; /* Adjusts image placement */
+  }
+
+  .hero h1,
+  .hero p {
     text-align: center;
   }
 
@@ -187,12 +192,14 @@
     max-width: 90%;
   }
 
-  .rebates, .maintenance {
+  .rebates,
+  .maintenance {
     flex-direction: column;
     text-align: center;
   }
 
-  .rebate-img, .maintenance img {
+  .rebate-img,
+  .maintenance img {
     width: 100%;
     max-width: 90%;
   }
@@ -201,7 +208,8 @@
     max-width: 70%;
   }
 
-  .rebate-content, .maintenance-content {
+  .rebate-content,
+  .maintenance-content {
     padding-left: 0;
   }
 }

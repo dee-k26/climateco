@@ -1,0 +1,154 @@
+/* General Service Page Styling */
+.service-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+}
+
+/* Service Header */
+.service-header {
+    background: var(--secondary-color);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.service-header h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.service-header p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-top: 10px;
+}
+
+/* Service Content Section */
+.service-content {
+    background: var(--secondary-color);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.service-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.service-content p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+/* Bullet Points with Checkmarks */
+.service-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service-content li {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.service-content li::before {
+    content: "✔";
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Call-to-Action Section */
+.cta-section {
+    background: var(--primary-color);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    text-align: center;
+    color: white;
+}
+
+.cta-section h2 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: white;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Contact Form Styling */
+.contact-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form-container h2 {
+    color: var(--text-color);
+}
+
+/* Service Content Layout - Image & Text Side-by-Side */
+.service-content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Space between image and text */
+    justify-content: space-between;
+}
+
+/* Service Image (Left Side) */
+.service-image {
+    width: 40%; /* Adjust for balance */
+    max-width: 350px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Service Text (Right Side) */
+.service-text {
+    flex: 1;
+    text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service-page {
+        padding: 20px;
+    }
+
+    .service-header,
+    .service-content,
+    .cta-section {
+        padding: 20px;
+    }
+
+    .service-header h1 {
+        font-size: 2rem;
+    }
+
+    .cta-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .service-content-wrapper {
+        flex-direction: column; /* Stack on mobile */
+        text-align: center;
+    }
+
+    .service-image {
+        width: 100%; /* Full width on smaller screens */
+        max-width: 100%;
+    }
+}

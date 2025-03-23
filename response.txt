@@ -1,0 +1,31 @@
+HTTP/1.1 200 OK
+Content-Type: text/html;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Date: Wed, 12 Feb 2025 10:05:24 GMT
+Server: Apache
+Strict-Transport-Security: max-age=63072000; includeSubDomains
+X-Frame-Options: SAMEORIGIN
+x-record-uuid: d6c5f631-6fc1-4417-b929-22682e1bb01b
+Cache-Control: max-age=0
+Expires: Wed, 12 Feb 2025 10:05:24 GMT
+Vary: Accept-Encoding
+X-Cache: Miss from cloudfront
+Via: 1.1 e3d6764a647541ed814ff5842b8b1476.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: SYD62-P2
+Alt-Svc: h3=":443"; ma=86400
+X-Amz-Cf-Id: yB_d4Oa2_uvVoJ7wyKkh0o7z4MMONx3XBxiLkeLPtqYYqSgZZvR4Cg==
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>200 OK</title>
+    </head>
+    <body>
+        <h1>OK</h1>
+        <p></p>
+        <hr />
+        <address>ServiceM8/1.0</address>
+    </body>
+</html>

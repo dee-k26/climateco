@@ -61,8 +61,7 @@
 }
 
 .nav ul li a:hover {
-  text-decoration: underline;
-  color: var(--accent-color); /* Warm brown hover effect */
+  color: var(--hover-color); /* Warm brown hover effect */
 }
 
 /* Services Dropdown */
@@ -124,7 +123,6 @@
 
 /* Hover Effect for Dropdown Links */
 .dropdown-menu li a:hover {
-  background: var(--accent-color); /* Dusty olive */
   color: white;
   border-radius: 3px;
 }

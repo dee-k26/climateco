@@ -11,6 +11,9 @@ const GasHeaterService = () => {
       <section className="service-header">
         <h1>Gas Heater Service & Repairs</h1>
         <p>Keep your home safe and warm with professional heater servicing.</p>
+        <a href="/contact" className="cta-button">
+          Book Now
+        </a>
       </section>
 
       <section className="service-content">

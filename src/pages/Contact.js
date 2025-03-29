@@ -31,9 +31,16 @@ const AboutContact = () => {
         </div>
       </section>
 
-      {/* Google Maps Embed */}
-      <div className="google-maps">
-        <iframe
+  
+
+      <section className="contact-container">
+        <div className="contact-info">
+          <h2>Contact Us</h2>
+          <p>📍 Ocean Grove, VIC</p>
+          <p>📞 <a href="tel:0430831199">0430 831 199</a></p>
+          <p>✉️ <a href="mailto:info@climateco.au">info@climateco.au</a></p>
+           
+        <iframe className="google-maps"
           title="Google Maps"
           src="https://maps.google.com/maps?q=Ocean+Grove+VIC&t=&z=13&ie=UTF8&iwloc=&output=embed"
           width="100%"
@@ -42,14 +49,7 @@ const AboutContact = () => {
           allowFullScreen=""
           loading="lazy"
         ></iframe>
-      </div>
-
-      <section className="contact-container">
-        <div className="contact-info">
-          <h2>Contact Us</h2>
-          <p>📍 Ocean Grove, VIC</p>
-          <p>📞 <a href="tel:0430831199">0430 831 199</a></p>
-          <p>✉️ <a href="mailto:info@climateco.au">info@climateco.au</a></p>
+      
         </div>
 
         <div className="contact-form-section">

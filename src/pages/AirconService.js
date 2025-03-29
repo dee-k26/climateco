@@ -6,11 +6,14 @@ import airconServiceImage from "../assets/aircon-repair.jpg";
 const AirconService = () => {
   return (
     <div className="service-page">
-    
+
 
       <section className="service-header">
         <h1>Air Conditioning Service & Repairs</h1>
         <p>Stay cool with our expert aircon servicing, repairs, and maintenance.</p>
+        <a href="/contact" className="cta-button">
+          Book Now
+        </a>
       </section>
 
       <div className="service-content-wrapper">
@@ -26,15 +29,15 @@ const AirconService = () => {
             <li> Increase the lifespan of your AC unit</li>
           </ul>
         </div>
-        </div>
-
-        <section className="cta-section">
-          <h2>Book Your Aircon Service Today</h2>
-          <p>Ensure your air conditioner is running at peak performance.</p>
-          <ContactForm />
-        </section>
       </div>
-      );
+
+      <section className="cta-section">
+        <h2>Book Your Aircon Service Today</h2>
+        <p>Ensure your air conditioner is running at peak performance.</p>
+        <ContactForm />
+      </section>
+    </div>
+  );
 };
 
-      export default AirconService;
+export default AirconService;

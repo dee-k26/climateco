@@ -1,16 +1,19 @@
 import React from "react";
 import "../styles/Services.css";
-import ContactForm from "../components/ContactForm";
+import ContactFormQuote from "../components/ContactFormQuote";
 import airconInstallImage from "../assets/aircon-install.png"
 
 const AirconInstallation = () => {
     return (
         <div className="service-page">
-        
+
 
             <section className="service-header">
                 <h1>Air Conditioning Installation</h1>
                 <p>Professional installation for split systems, ducted aircon, and multi-head units.</p>
+                <a href="/contact" className="cta-button">
+                    Get a Free Quote
+                </a>
             </section>
 
             <section className="service-content">
@@ -33,7 +36,7 @@ const AirconInstallation = () => {
             <section className="cta-section">
                 <h2>Book Your Aircon Installation Today</h2>
                 <p>Get expert installation with fast service and competitive pricing.</p>
-                <ContactForm />
+                <ContactFormQuote />
             </section>
         </div>
     );

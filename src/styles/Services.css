@@ -70,19 +70,19 @@
 
 /* Call-to-Action Section */
 .cta-section {
-    background: var(--primary-color);
+    background: var(--secondary-color);
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
     text-align: center;
-    color: white;
+    color: var(--text-color);
 }
 
 .cta-section h2 {
     margin-bottom: 10px;
     font-size: 2rem;
-    color: white;
+    color: var(--text-color);
 }
 
 .cta-section p {

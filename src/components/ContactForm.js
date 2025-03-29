@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import "../styles/ContactForm.css";
+import { useNavigate } from "react-router-dom";
+
 
 const ContactForm = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -31,6 +34,7 @@ const ContactForm = () => {
 
       const responseData = await response.json();
       console.log("✅ Success:", responseData);
+      navigate("/thank-you");
       alert("Your request has been sent to ServiceM8 Inbox!");
       setFormData({
         firstName: "",

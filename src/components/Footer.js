@@ -15,7 +15,7 @@ const Footer = () => {
             📞 <a href="tel:0430831199">0430 831 199</a>
           </p>
           <p>
-            ✉️ <a href="mailto:info@climateco.au">info@climateco.au</a>
+            ✉️ <a href="mailto:workorders@theclimateco.com.au">workorders@theclimateco.com.au</a>
           </p>
         </div>
 
@@ -24,13 +24,16 @@ const Footer = () => {
           <h4>Quick Links</h4>
           <ul>
             <li>
-              <Link to="/about">About Us</Link>
+              <Link to="/contact">About Us</Link>
             </li>
             <li>
               <Link to="/aircon-installation">Aircon Installation</Link>
             </li>
             <li>
-              <Link to="/aircon-service-repair">Service & Repair</Link>
+              <Link to="/aircon-service">Aircon Service & Repair</Link>
+            </li>
+            <li>
+              <Link to="/gas-heater-service">Heater Service & Repair</Link>
             </li>
             <li>
               <Link to="/government-rebate">Rebates</Link>
